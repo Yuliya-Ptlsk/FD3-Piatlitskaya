@@ -13,22 +13,23 @@
 <script src="ListComponent.js"></script>
 <script>
     var text = 'Каталог товаров в интернет-магазине ClimateTechno';
-    var titlesArr =
-        ['Тип оборудования','Марка','Серия и модель','Мощность, кВт','URL изображения','Количество на складе, шт.','Цена, бел.руб.'];
+    var titlesArr =[
+       {code:'t_1',title:'Тип оборудования'},{code:'t_2',title:'Марка'},{code:'t_3',title:'Серия и модель'},{code:'t_4',title:'Мощность, кВт'},{code:'t_5',title:'URL изображения'},{code:'t_6',title:'Количество на складе, шт.'},{code:'t_7',title:'Цена, бел.руб.'}
+    ];
     var articlesArr = [
-        {code:1,type:'Кондиционер',brand:'Energolux',model:'Bazel',power:2.50,photo:'img/basel.jpg',quantity:50,price:990},
-        {code:2,type:'Кондиционер',brand:'Energolux',model:'Bern',power:2.61,photo:'img/bern.jpg',quantity:10,price:1490},
-        {code:3,type:'Кондиционер',brand:'Energolux',model:'Geneva',power:2.58,photo:'img/geneva.jpg',quantity:35,price:1350},
-        {code:4,type:'Кондиционер',brand:'Energolux',model:'Zurich',power:2.52,photo:'img/zurich.jpg',quantity:44,price:1140},
-        {code:5,type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTX5',power:2.51,photo:'img/CH-S07FTX5.jpg',quantity:100,price:880},
-        {code:6,type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTXE',power:2.54,photo:'img/CH-S07FTXE.jpg',quantity:23,price:1275},
-        {code:7,type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTXQ',power:2.55,photo:'img/CH-S07FTXQ',quantity:70,price:1300},
-        {code:8,type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTXHV-B',power:3.2,photo:'img/CH-S09FTXHV-B.jpg',quantity:14,price:3725},
-        {code:9,type:'Конвектор',brand:'Electrolux',model:'ECH/B-1500',power:1.5,photo:'img/electrolux.jpg',quantity:10,price:240},
-        {code:10,type:'Конвектор',brand:'Hisense',model:'ND15-44J',power:1.5,photo:'img/hisense.jpg',quantity:50,price:126},
-        {code:11,type:'Конвектор',brand:'Ballu',model:'BEC/EM-1500',power:1.5,photo:'img/ballu.jpg',quantity:30,price:98},
-        {code:12,type:'Тепловая завеса',brand:'Ballu',model:'BHC-L06-S03',power:1.5,photo:'img/zavesa.jpg',quantity:47,price:168},
-        {code:13,type:'Тепловая пушка',brand:'Ballu',model:'BHP-M-3',power:1.5,photo:'img/elektricheskaya-teplovaya-pushka-ballu-bhp-m-3.jpg',quantity:46,price:125}
+        {code:'a_1',type:'Кондиционер',brand:'Energolux',model:'Bazel',power:2.50,photoURL:'img/basel.jpg',quantity:50,price:990},
+        {code:'a_2',type:'Кондиционер',brand:'Energolux',model:'Bern',power:2.61,photoURL:'img/bern.jpg',quantity:10,price:1490},
+        {code:'a_3',type:'Кондиционер',brand:'Energolux',model:'Geneva',power:2.58,photoURL:'img/geneva.jpg',quantity:35,price:1350},
+        {code:'a_4',type:'Кондиционер',brand:'Energolux',model:'Zurich',power:2.52,photoURL:'img/zurich.jpg',quantity:44,price:1140},
+        {code:'a_5',type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTX5',power:2.51,photoURL:'img/CH-S07FTX5.jpg',quantity:100,price:880},
+        {code:'a_6',type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTXE',power:2.54,photoURL:'img/CH-S07FTXE.jpg',quantity:23,price:1275},
+        {code:'a_7',type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTXQ',power:2.55,photoURL:'img/CH-S07FTXQ',quantity:70,price:1300},
+        {code:'a_8',type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTXHV-B',power:3.2,photoURL:'img/CH-S09FTXHV-B.jpg',quantity:14,price:3725},
+        {code:'a_9',type:'Конвектор',brand:'Electrolux',model:'ECH/B-1500',power:1.5,photoURL:'img/electrolux.jpg',quantity:10,price:240},
+        {code:'a_10',type:'Конвектор',brand:'Hisense',model:'ND15-44J',power:1.5,photoURL:'img/hisense.jpg',quantity:50,price:126},
+        {code:'a_11',type:'Конвектор',brand:'Ballu',model:'BEC/EM-1500',power:1.5,photoURL:'img/ballu.jpg',quantity:30,price:98},
+        {code:'a_12',type:'Тепловая завеса',brand:'Ballu',model:'BHC-L06-S03',power:1.5,photoURL:'img/zavesa.jpg',quantity:47,price:168},
+        {code:'a_13',type:'Тепловая пушка',brand:'Ballu',model:'BHP-M-3',power:1.5,photoURL:'img/elektricheskaya-teplovaya-pushka-ballu-bhp-m-3.jpg',quantity:46,price:125}
     ];
     ReactDOM.render(
         React.createElement(ListComponent,{name:text,head:titlesArr,articles:articlesArr}),

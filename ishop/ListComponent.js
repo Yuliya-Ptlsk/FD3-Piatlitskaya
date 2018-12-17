@@ -2,23 +2,28 @@ var ListComponent = React.createClass({
     displayName:'ArticlesList',
     propTypes: {
         name: React.PropTypes.string.isRequired,
-        head: React.PropTypes.arrayOf(React.PropTypes.string.isRequired),
+        head: React.PropTypes.arrayOf(
+            React.PropTypes.shape({
+                code:React.PropTypes.string.isRequired,
+                title: React.PropTypes.string.isRequired,
+            })
+        ),
         articles: React.PropTypes.arrayOf(
             React.PropTypes.shape({
+                code: React.PropTypes.string.isRequired,
                 type: React.PropTypes.string.isRequired,
                 brand: React.PropTypes.string.isRequired,
                 model: React.PropTypes.string.isRequired,
                 power: React.PropTypes.number.isRequired,
-                photo: React.PropTypes.any.isRequired,
+                photoURL: React.PropTypes.any.isRequired,
                 quantity: React.PropTypes.number.isRequired,
                 price: React.PropTypes.number.isRequired
             })
         )
     },
     render: function(){
-
       var head = this.props.head.map(v =>
-        React.DOM.div({className:'Title'},v)
+        React.DOM.div({key: v.code,className:'Title'}, v.title)
       );
 
 
@@ -28,7 +33,7 @@ var ListComponent = React.createClass({
             React.DOM.div({className:'Brand'}, v.brand),
             React.DOM.div({className:'Model'}, v.model),
             React.DOM.div({className:'Power'}, v.power),
-            React.DOM.div({className:'Photo'}, v.photo),
+            React.DOM.div({className:'Photo'}, v.photoURL),
             React.DOM.div({className:'Quantity'}, v.quantity),
             React.DOM.div({className:'Price'}, v.price)
         )
