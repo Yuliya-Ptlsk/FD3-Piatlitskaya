@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ishop2</title>
+    <link rel="stylesheet" type="text/css" href="ListComponent.css">
+    <link rel="stylesheet" type="text/css" href="ItemComponent.css">
+</head>
+<body>
+<div id="container"></div>
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+<script src="ListComponent.js"></script>
+<script src="ItemComponent.js"></script>
+<script>
+    var text = 'Каталог товаров в интернет-магазине ClimateTechno';
+    var titlesArr
+        =['Тип оборудования','Марка','Серия и модель','Мощность, кВт','URL изображения','Количество на складе, шт.','Цена, бел.руб.','Удалить товар'];
+    var articlesArr = [
+        {code:'a_1',type:'Кондиционер',brand:'Energolux',model:'Bazel',power:2.50,photoURL:'img/basel.jpg',quantity:50,price:990},
+        {code:'a_2',type:'Кондиционер',brand:'Energolux',model:'Bern',power:2.61,photoURL:'img/bern.jpg',quantity:10,price:1490},
+        {code:'a_3',type:'Кондиционер',brand:'Energolux',model:'Geneva',power:2.58,photoURL:'img/geneva.jpg',quantity:35,price:1350},
+        {code:'a_4',type:'Кондиционер',brand:'Energolux',model:'Zurich',power:2.52,photoURL:'img/zurich.jpg',quantity:44,price:1140},
+        {code:'a_5',type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTX5',power:2.51,photoURL:'img/CH-S07FTX5.jpg',quantity:100,price:880},
+        {code:'a_6',type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTXE',power:2.54,photoURL:'img/CH-S07FTXE.jpg',quantity:23,price:1275},
+        {code:'a_7',type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTXQ',power:2.55,photoURL:'img/CH-S07FTXQ.jpg',quantity:70,price:1300},
+        {code:'a_8',type:'Кондиционер',brand:'Cooper&Hunter',model:'CH-S09FTXHV-B',power:3.2,photoURL:'img/CH-S09FTXHV-B.jpg',quantity:14,price:3725},
+        {code:'a_9',type:'Конвектор',brand:'Electrolux',model:'ECH/B-1500',power:1.5,photoURL:'img/convector-electrolux.jpg',quantity:10,price:240},
+        {code:'a_10',type:'Конвектор',brand:'Hisense',model:'ND15-44J',power:1.5,photoURL:'img/convector-hisense.jpg',quantity:50,price:126},
+        {code:'a_11',type:'Конвектор',brand:'Ballu',model:'BEC/EM-1500',power:1.5,photoURL:'img/convector-ballu.jpg',quantity:30,price:98},
+        {code:'a_12',type:'Тепловая завеса',brand:'Ballu',model:'BHC-L06-S03',power:1.5,photoURL:'img/zavesa.jpg',quantity:47,price:168},
+        {code:'a_13',type:'Тепловая пушка',brand:'Ballu',model:'BHP-M-3',power:1.5,photoURL:'img/pushka-ballu.jpg',quantity:46,price:125}
+    ];
+    ReactDOM.render(
+        React.createElement(ListComponent,{name:text,head:titlesArr,articles:articlesArr}),
+        document.getElementById('container')
+    );
+</script>
+</body>
+</html>

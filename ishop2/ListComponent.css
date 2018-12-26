@@ -1,0 +1,51 @@
+*body {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-size:16px;
+    font-family: 'Rubik', sans-serif;;
+}
+.Text {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding:15px 0;
+}
+.Titles, .Article {
+    display: flex;
+    flex-wrap: nowrap;
+    border: solid black 1px;
+}
+.Article {
+    border-top: none;
+}
+
+.Titles{
+    text-align: center;
+    font-weight:600;
+}
+.Type, .Title:nth-child(1){
+    flex-basis: 12%;
+}
+.Brand, .Title:nth-child(2){
+    flex-basis: 13%;
+}
+.Model, .Title:nth-child(3){
+    flex-basis: 13%;
+}
+.Power, .Title:nth-child(4), .Quantity, .Title:nth-child(6), .Price, .Title:nth-child(7), .Delete, .Title:nth-child(8){
+    flex-basis: 10%;
+    text-align: center;
+}
+.Delete, .Title:nth-child(8){
+    flex-basis: 7%;
+}
+.Delete input {
+    padding: 1px 15px;
+}
+.Photo, .Title:nth-child(5){
+    flex-basis: 25%;
+}
+.Title, .Article>div{
+    padding: 5px 15px;
+}
