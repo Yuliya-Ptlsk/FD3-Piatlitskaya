@@ -1,0 +1,33 @@
+.Article {
+    display: flex;
+    flex-wrap: nowrap;
+    border: solid black 1px;
+}
+.Article {
+    border-top: none;
+}
+.Type {
+    flex-basis: 12%;
+}
+.Brand {
+    flex-basis: 13%;
+}
+.Model {
+    flex-basis: 13%;
+}
+.Power, .Quantity, .Price, .Delete{
+    flex-basis: 10%;
+    text-align: center;
+}
+.Delete {
+    flex-basis: 7%;
+}
+.Delete input {
+    padding: 1px 15px;
+}
+.Photo {
+    flex-basis: 25%;
+}
+.Article>div{
+    padding: 5px 15px;
+}
