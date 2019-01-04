@@ -1,0 +1,38 @@
+*body {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-size:16px;
+    font-family: 'Rubik', sans-serif;;
+}
+.Titles {
+    display: flex;
+    flex-wrap: nowrap;
+    border: solid black 1px;
+}
+.Titles{
+    text-align: center;
+    font-weight:600;
+}
+.Title:nth-child(1){
+    flex-basis: 12%;
+}
+.Title:nth-child(2){
+    flex-basis: 13%;
+}
+.Title:nth-child(3){
+    flex-basis: 13%;
+}
+.Title:nth-child(4), .Title:nth-child(6), .Title:nth-child(7), .Title:nth-child(8){
+    flex-basis: 10%;
+    text-align: center;
+}
+.Title:nth-child(8){
+    flex-basis: 7%;
+}
+.Title:nth-child(5){
+    flex-basis: 25%;
+}
+.Title {
+    padding: 5px 15px;
+}
