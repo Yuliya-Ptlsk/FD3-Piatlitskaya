@@ -16,8 +16,8 @@ var ItemComponent = React.createClass({
     selectedItemCode: function(){
         this.props.cbSelectedItemCode(this.props.code);
     },
-    delete: function(){
-        this.props.cbDelete(this.props.code);
+    delete: function(EO){
+        this.props.cbDelete(this.props.code,EO);
     },
     render: function() {
         return React.DOM.div({

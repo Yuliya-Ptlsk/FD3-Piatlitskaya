@@ -25,10 +25,13 @@ var ListComponent = React.createClass({
     selectedItemCode: function(code){
         this.setState({selectedItem:code});
     },
-    delete: function(code){
-        confirm('Вы действительно хотите удалить этот товар?')?
-            (this.setState({itemsList: this.state.itemsList.filter(item => item.code!= code),})
-            ):null;
+    delete: function(code,EO){
+        if(confirm('Вы действительно хотите удалить этот товар?')) {
+            this.setState({itemsList: this.state.itemsList.filter(item => item.code!= code)})
+        } else {
+            EO.preventDefault();
+            EO.stopPropagation();
+        }
     },
     render: function(){
         var head = this.props.head.map(title =>
