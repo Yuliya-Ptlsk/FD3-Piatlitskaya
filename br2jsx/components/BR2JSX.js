@@ -12,8 +12,8 @@ class BR2JSX extends React.Component {
 
     render(){
         let regExp = /<br\s?\/?>/;
-        let splitText = this.props.text.split(regExp).map(word => <div key={Math.random()}>{word}</div>);
-
+        let splitText = this.props.text.split(regExp).map( (word,i) => [word,<br key={i} />]);
+        console.log(splitText);
         return (
         <div className="BrComponent">
             {splitText}
