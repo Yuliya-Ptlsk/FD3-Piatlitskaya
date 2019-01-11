@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 5;
+}
