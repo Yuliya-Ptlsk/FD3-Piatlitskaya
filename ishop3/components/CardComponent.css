@@ -1,0 +1,32 @@
+*body {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-size:16px;
+    font-family: 'Rubik', sans-serif;;
+}
+.Card {
+    padding: 15px 0;
+}
+.CardName {
+    padding: 10px 0;
+    font-weight: 600;
+}
+.CardType {
+    padding: 12px 0;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.NotValid {
+    font-size: 13px;
+    color: red;
+}
+label {
+    position: relative;
+}
+.Input {
+    position: absolute;
+    left: 160px;
+    top:0;
+    width: 700px;
+}

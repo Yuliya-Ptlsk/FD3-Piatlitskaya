@@ -28,11 +28,15 @@
     text-align: center;
 }
 .Title:nth-child(8){
-    flex-basis: 7%;
+    flex-basis: 12%;
 }
 .Title:nth-child(5){
-    flex-basis: 25%;
+    flex-basis: 20%;
 }
 .Title {
     padding: 5px 15px;
+    border-right:solid #d4ddda 1px;
+}
+.Title:nth-child(8){
+    border-right:none;
 }
