@@ -1,0 +1,37 @@
+*body {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-size:16px;
+    font-family: 'Rubik', sans-serif;;
+}
+.company-name, .filter-buttons {
+    padding: 15px 0;
+    border-bottom: solid #d4ddda 1px;
+}
+.company-name>div {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 2;
+}
+.clients-list {
+    margin-top: 15px;
+}
+table {
+    border-collapse: collapse;
+    width:100%;
+}
+tr:first-child td {
+    font-weight: 600;
+}
+td {
+    border-top: solid #d4ddda 1px;
+    border-bottom: solid #d4ddda 1px;
+    padding:0;
+    text-align: center;
+}
+td>span {
+    display: block;
+    height: 100%;
+    padding: 20px 0;
+}
