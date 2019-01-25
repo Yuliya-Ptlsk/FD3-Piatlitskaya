@@ -1,0 +1,18 @@
+form {
+    margin-top:15px;
+    padding: 10px 0;
+    border-top: solid #d4ddda 1px;
+    border-bottom: solid #d4ddda 1px;
+}
+form label {
+    display: block;
+    width: 320px;
+    position:relative;
+    margin-bottom: 10px;
+}
+form input[type="text"] {
+    width: 175px;
+    position: absolute;
+    top:0;
+    right:0;
+}

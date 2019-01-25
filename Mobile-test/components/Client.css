@@ -1,0 +1,6 @@
+.client .active {
+    background-color: #a6d6b3;
+}
+.client .blocked {
+    background-color: #ffadad;
+}
