@@ -6,10 +6,73 @@ import renderer from 'react-test-renderer';
 import '../components/MobileCompany.css';
 import MobileCompany from '../components/MobileCompany';
 
+let clients = {
+    "Velcom": [
+    {
+        "id": "1_V",
+        "secondName": "Иванов",
+        "name": "Иван",
+        "patronymic": "Иванович",
+        "balance": 200
+    },
+    {
+        "id": "2_V",
+        "secondName": "Сидоров",
+        "name": "Сидор",
+        "patronymic": "Сидорович",
+        "balance": 250
+    },
+    {
+        "id": "3_V",
+        "secondName": "Петров",
+        "name": "Пётр",
+        "patronymic": "Петрович",
+        "balance": 180
+    },
+    {
+        "id": "4_V",
+        "secondName": "Григорьев",
+        "name": "Григорий",
+        "patronymic": "Григорьевич",
+        "balance": -220
+    }
+],
+    "MTS": [
+        {
+            "id": "1_M",
+            "secondName": "Сергеев",
+            "name": "Сергей",
+            "patronymic": "Сергеевич",
+            "balance": 50
+        },
+        {
+            "id": "2_M",
+            "secondName": "Смирнов",
+            "name": "Станислав",
+            "patronymic": "Станиславович",
+            "balance": 190
+        },
+        {
+            "id": "3_M",
+            "secondName": "Фёдоров",
+            "name": "Фёдор",
+            "patronymic": "Фёдорович",
+            "balance": -100
+        },
+        {
+            "id": "4_M",
+            "secondName": "Максимов",
+            "name": "Максим",
+            "patronymic": "Максимович",
+            "balance": -20
+        }
+    ]
+};
+
 test('Тестирование фильтрации "активные клиенты" и "заблокированные клиенты"', () => {
     //тестовая версия компонента MobileCompany
     const component = renderer.create(
-        <MobileCompany/>
+        <MobileCompany clients={clients} />
     );
 
     //получаем снэпшот (HTML-снимок) компонента для сверки, что верстка не изменилась

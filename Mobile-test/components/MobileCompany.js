@@ -36,8 +36,26 @@ class MobileCompany extends React.PureComponent {
     state = {
         companyName:"Velcom",
         clients_Velcom: this.props.clients.Velcom,
+        /*clients_Velcome: [
+            {"id": "1_V","secondName": "Иванов","name": "Иван","patronymic": "Иванович","balance": 200},
+            {"id": "2_V","secondName": "Сидоров","name": "Сидор","patronymic": "Сидорович","balance": 250},
+            {"id": "3_V","secondName": "Петров","name": "Пётр","patronymic": "Петрович","balance": 180},
+            {"id": "4_V","secondName": "Григорьев","name": "Григорий","patronymic": "Григорьевич","balance": -220}
+        ],*/
         clients_MTS: this.props.clients.MTS,
+        /*clients_MTS:[
+            {"id": "1_M","secondName": "Сергеев","name": "Сергей","patronymic": "Сергеевич","balance": 50},
+            {"id": "2_M","secondName": "Смирнов","name": "Станислав","patronymic": "Станиславович","balance": 190},
+            {"id": "3_M","secondName": "Фёдоров","name": "Фёдор","patronymic": "Фёдорович","balance": -100},
+            {"id": "4_M","secondName": "Максимов","name": "Максим","patronymic": "Максимович","balance": -20}
+        ],*/
         clients:this.props.clients.Velcom,
+        /*clients:[
+            {"id": "1_V","secondName": "Иванов","name": "Иван","patronymic": "Иванович","balance": 200},
+            {"id": "2_V","secondName": "Сидоров","name": "Сидор","patronymic": "Сидорович","balance": 250},
+            {"id": "3_V","secondName": "Петров","name": "Пётр","patronymic": "Петрович","balance": 180},
+            {"id": "4_V","secondName": "Григорьев","name": "Григорий","patronymic": "Григорьевич","balance": -220}
+        ],*/
         elemNumber: null,
         //companyMode:0 - Velcom's clients are visible
         //companyMode:1 - MTS' clients are visible
