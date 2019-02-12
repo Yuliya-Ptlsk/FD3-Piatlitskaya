@@ -1,0 +1,6 @@
+div.holder {
+  border: double 10px slategrey;
+  width: 350px;
+  text-align: center;
+  margin: auto;
+}
