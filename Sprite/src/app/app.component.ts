@@ -17,9 +17,9 @@ export class AppComponent {
   constructor(){
     this.URL = 'http://fe.it-academy.by/Examples/cards2.png';
     this.X = 0;
-    this.Y = -2325;
-    this.W = 140;
-    this.H = 190;
+    this.Y = 0;
+    this.W = 143;
+    this.H = 193;
   };
 
   getURL():string{
@@ -27,19 +27,32 @@ export class AppComponent {
   };
 
   getPositionX():number{
-    return this.X
+    return this.X;
   };
 
   getPositionY():number{
-    return this.Y
+    return this.Y;
   };
 
   getWidth():number{
-    return this.W
+    return this.W;
   };
 
   getHeight():number{
-    return this.H
+    return this.H;
   };
 
+  setNewCoords():void{
+    if (this.X>-this.W*3){
+      //'1'- горизонатльное расстояние между изображениями
+      this.X -=this.W+1;
+    } else{
+      if(this.Y<-this.H*13){
+        this.Y=0;
+      }
+      this.X = 0;
+      //'1'- вертикальное расстояние между изображениями
+      this.Y -=this.H+1;
+    }
+  };
 }
